@@ -7,11 +7,11 @@ setup(
     version='1.5.14',
     description='Singer.io tap for extracting data from the NetSuite SOAP',
     author='hotglue',
-    url='https://hotglue.xyz/',
+    url='',
     classifiers=['Programming Language :: Python :: 3 :: Only'],
     py_modules=['tap_netsuite'],
     install_requires=[
-        'netsuitesdk==2.7.4', # USING THE HOTGLUE VERSION
+        'netsuitesdk==2.12.1',
         'requests==2.21.0',
         'singer-python==5.3.1',
         'xmltodict==0.11.0',
