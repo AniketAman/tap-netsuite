@@ -11,6 +11,8 @@ from netsuitesdk.api.folders import Folders
 from netsuitesdk.api.files import Files
 from netsuitesdk.api.projects import Projects
 from netsuitesdk.api.expense_categories import ExpenseCategory
+from netsuitesdk.api.custom_lists import CustomLists
+from netsuitesdk.api.custom_records import CustomRecords
 
 import time
 import json
@@ -45,6 +47,8 @@ class ExtendedNetSuiteConnection:
         self.folders = Folders(ns_client)
         self.files = Files(ns_client)
         self.expense_categories = ExpenseCategory(ns_client)
+        self.custom_lists = CustomLists(ns_client)
+        self.custom_records = CustomRecords(ns_client)
         self.projects = Projects(ns_client)
         self.vendor_payments = VendorPayments(ns_client)
         self.invoice = Invoice(ns_client)
