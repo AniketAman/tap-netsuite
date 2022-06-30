@@ -11,9 +11,6 @@ from netsuitesdk.api.folders import Folders
 from netsuitesdk.api.files import Files
 from netsuitesdk.api.projects import Projects
 from netsuitesdk.api.expense_categories import ExpenseCategory
-from netsuitesdk.api.custom_lists import CustomLists
-from netsuitesdk.api.custom_records import CustomRecords
-from netsuitesdk.api.price_level import PriceLevel
 
 import time
 import json
@@ -48,8 +45,6 @@ class ExtendedNetSuiteConnection:
         self.folders = Folders(ns_client)
         self.files = Files(ns_client)
         self.expense_categories = ExpenseCategory(ns_client)
-        self.custom_lists = CustomLists(ns_client)
-        self.custom_records = CustomRecords(ns_client)
         self.projects = Projects(ns_client)
         self.vendor_payments = VendorPayments(ns_client)
         self.invoice = Invoice(ns_client)
@@ -66,7 +61,6 @@ class ExtendedNetSuiteConnection:
             'VendorPayment': self.vendor_payments,
             'InventoryAdjustment': InventoryAdjustment(ns_client),
             'InventoryTransfer': InventoryTransfer(ns_client),
-            'PriceLevel': PriceLevel(ns_client),
             'InventoryItem': InventoryItem(ns_client),
             'SalesOrders': SalesOrders(ns_client),
             'CreditMemos': CreditMemos(ns_client),
